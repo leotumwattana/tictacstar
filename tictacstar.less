@@ -1,0 +1,116 @@
+/* CSS declarations go here */
+@import url(http://fonts.googleapis.com/css?family=Exo:400,700,800);
+
+@red: #da3765;
+@teal: #47ccc1;
+
+
+body {
+  /*background-color: green;*/
+  font-family: 'Exo', Helvetica, sans-serif;
+  text-align: center;
+  background: url('/backgroundtexture.png')
+}
+
+.board {
+  width: 372px;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  float: left;
+  text-align: center;
+  font-size: 5em;
+  padding-top: 20px;
+  border: 4px dashed #c0c0c0;
+  text-transform: uppercase;
+}
+
+.hud {
+  text-align: center;
+  clear: both;
+  padding-top: 20px;
+
+  .turn {
+    font-size: 2.5em;
+    padding: 15px 0;
+    font-weight: 700;
+  }
+
+  button {
+    width: 180px;
+    height: 50px;
+    background: @red;
+    border: 0;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+    box-shadow: 0 6px 0 0 #a92b4f;
+    -webkit-box-shadow: 0 6px 0 0 #a92b4f;
+
+    color: #f6a2a9;
+    font-size: 1.4em;
+    text-transform: uppercase;
+
+    outline: none;
+  }
+
+  button:hover {
+    margin-top: 3px;
+    box-shadow: 0 3px 0 0 #a92b4f;
+    -webkit-box-shadow: 0 3px 0 0 #a92b4f;
+  }
+}
+
+h1 {
+  font-size: 3em;
+  color: @teal;
+  font-weight: 800;
+  text-transform: uppercase;
+  .tac {
+    color: @red;
+  }
+}
+
+.piece {
+  font-weight: 800;
+}
+
+.X { color: @red; }
+
+.O { color: @teal; }
+
+.cell-0, .cell-3, .cell-6 {
+  border-left: 0;
+  border-right: 0;
+}
+
+.cell-2, .cell-5, .cell-8 {
+  border-right: 0;
+  border-left: 0;
+}
+
+.cell-0, .cell-1, .cell-2 {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.cell-6, .cell-7, .cell-8 {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

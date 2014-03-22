@@ -1,0 +1,30 @@
+<head>
+  <title>tictacstar</title>
+</head>
+
+<body>
+  <h1><span class="tic">Tic</span> <span class="tac">Tac</span> <span class="star">Star</span></h1>
+  {{> board}}
+</body>
+
+<template name="board">
+  <div class="board">
+    {{#each cells}}
+      <div class="cell cell-{{this._id}} {{this.piece}}">
+        <span class="piece">{{this.piece}}</span>
+      </div>
+    {{/each}}
+  </div>
+  <div class="hud">
+    <div class="turn {{#if winner}} {{winner}} {{else}} {{turn}} {{/if}}">
+      {{#if winner}}
+        {{winner}} WON!
+      {{else }}
+        {{turn}}'s turn
+      {{/if}}
+    </div>
+    <button id="reset">
+      Reset
+    </button>
+  </div>
+</template>
